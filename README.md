@@ -1,8 +1,8 @@
 # daloradius-freeradius-container
- <h2>A containerized Daloradius + Freeradius</h2fre>
+ <h2>A containerized Daloradius + Freeradius</h2>
  
  </p>
-    <h3>Docker image for Daloradius based on Ubuntu 20.04 LTS
+    <h3>Docker image for Daloradius based on Ubuntu 20.04 LTS</h3>
    <p> Services includes:
     <p> - freeradius 3, 
     <p> - Apache
@@ -88,7 +88,8 @@ networks:
     driver: bridge
  ```
  ---
- <h3>Inside the Container <b>radius</b></h3>
+ <h2>Inside the Container <b>radius</b></h2>
+ 
  Edit the file vim /etc/freeradius/3.0/mods-config/sql/main/mysql/setup.sql like an example below:
  ---
  ```sql
