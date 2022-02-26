@@ -44,7 +44,9 @@ DALO_VERSION V1.3
 If you are using armhf you have to change the MariaDB image. I have provided an example below as a comment.
  
  
- version: "3"
+
+```yaml
+version: "3"
 services:
   radius:
     image: frauhottelmann/daloradius-docker:tag #you need to change the tag to your arch and the desired version
@@ -72,4 +74,4 @@ services:
       - MYSQL_PASSWORD=dalodbpass
       - MYSQL_ROOT_PASSWORD=dalorootpass
     volumes:
-      - "./radius-mysql:/var/lib/mysql"
+      - ".
