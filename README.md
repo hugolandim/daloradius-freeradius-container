@@ -9,5 +9,5 @@
     <p> - php
     <p> - MariaDB-client
    <p> You need a separate container with MariaDB service
-   <p> User: administrator Password: radius
+   <p> User: administrator <p>Password: radius
 
