@@ -86,9 +86,11 @@ services:
 networks:
   radius:
     driver: bridge
+ ```
  ---
- 
- '''sql
+ Edit the file vim /etc/freeradius/3.0/mods-config/sql/main/mysql/setup.sql qith like example below:
+ ---
+ ```sql
  
  # -*- text -*-
 ##
@@ -120,3 +122,4 @@ GRANT ALL on radius.radpostauth TO 'rd'@'radiusmysql';
 ~                                                                                                                                                                                  
 ~                                                                                                                                                                                  
 -- INSERT --  
+ ```
