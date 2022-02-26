@@ -11,7 +11,7 @@
    <p> You need a separate container with MariaDB service.
    <p> DaloRadius' Credentials:
     <p> User: administrator <p>Password: radius
- <font type=bold>################################################</font><p>
+ <p><font type=bold>################################################</font><p>
  Environment variables
 MYSQL_USER
 
