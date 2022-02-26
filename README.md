@@ -53,7 +53,7 @@ services:
     container_name: radius
     restart: always
     depends_on:
-      - "radius-mysql" 
+      - "radiusmysql" 
     ports:
       - '1812:1812/udp'
       - '1813:1813/udp'
@@ -68,9 +68,9 @@ services:
       - radius
     privileged: 'true'
  
-  radius-mysql:
+  radiusmysql:
     image: mariadb:10.5
-    container_name: radius-mysql
+    container_name: radiusmysql
     restart: always
     environment:
       - MYSQL_DATABASE=radius
@@ -86,3 +86,37 @@ services:
 networks:
   radius:
     driver: bridge
+ 
+ 
+ '''sql
+ 
+ # -*- text -*-
+##
+## admin.sql -- MySQL commands for creating the RADIUS user.
+##
+##      WARNING: You should change 'localhost' and 'radpass'
+##               to something else.  Also update raddb/mods-available/sql
+##               with the new RADIUS password.
+##
+##      $Id: f0453e179a6721c5675f6d72ad30a97e1ccb48fa $
+
+#
+#  Create default administrator for RADIUS
+#
+CREATE USER 'rd'@'radiusmysql';
+SET PASSWORD FOR 'rd'@'radiusmysql' = PASSWORD('rddbpass');
+
+# The server can read any table in SQL
+GRANT SELECT ON radius.* TO 'rd'@'radiusmysql';
+
+# The server can write to the accounting and post-auth logging table.
+#
+#  i.e.
+GRANT ALL on radius.radacct TO 'rd'@'radiusmysql';
+GRANT ALL on radius.radpostauth TO 'rd'@'radiusmysql';
+~                                                                                                                                                                                  
+~                                                                                                                                                                                  
+~                                                                                                                                                                                  
+~                                                                                                                                                                                  
+~                                                                                                                                                                                  
+-- INSERT --  
