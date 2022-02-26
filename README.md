@@ -30,5 +30,5 @@ MYSQL_DATABASE
 standard value: radius
 TZ
 
-standard value: America/Sao_Paulo - see List of tz time zones <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"> See the list of timezones</a>
+standard value: America/Sao_Paulo - <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"> See the list of timezones</a>
 
