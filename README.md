@@ -8,10 +8,10 @@
     <p> - Apache
     <p> - php
     <p> - MariaDB-client
-   <p> You need a separate container with MariaDB service. <span class="emphasized">(See the docker-compose below)</span>
+   <p> You need a separate container with MariaDB service. <u>(See the docker-compose below)</u>
    <p> DaloRadius' Credentials:
     <p> User: administrator <p>Password: radius
- <p><span class="bolded">################################################</span<p>
+ <p><strong>################################################</strong><p>
  Environment variables
 MYSQL_USER
 
