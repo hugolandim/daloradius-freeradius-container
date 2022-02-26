@@ -8,6 +8,6 @@
     <p> - Apache
     <p> - php
     <p> - MariaDB-client
-    You need a separate container with MariaDB service
-    User: administrator Password: radius
+   <p> You need a separate container with MariaDB service
+   <p> User: administrator Password: radius
 
