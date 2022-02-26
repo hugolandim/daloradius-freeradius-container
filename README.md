@@ -10,7 +10,7 @@
     <p> - MariaDB-client (You need a separate container with MariaDB service. See the docker-compose below)
    <p> DaloRadius' Credentials:
     <p> User: administrator <p>Password: radius
- <p><strong>################################################</strong><p>
+ <p><span font-style:"bolded">################################################</span><p>
  Environment variables
 MYSQL_USER
 
@@ -30,6 +30,6 @@ standard value: radius
 TZ
 
 standard value: America/Sao_Paulo - <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"> See the list of timezones</a>
-<hr size="100" width="100%">
+<hr size="100" width="100%" color="red">
 
 
