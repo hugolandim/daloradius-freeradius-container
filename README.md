@@ -31,7 +31,7 @@ TZ
 
 standard value: America/Sao_Paulo - <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"> See the list of timezones</a>
  
- <img src="https://www.freeiconspng.com/uploads/red-line-png-0.png" width="700" alt="red line png">
+ <img src="https://www.freeiconspng.com/uploads/red-line-png-0.png" width="1024" alt="red line png">
  
 
 
