@@ -88,7 +88,7 @@ networks:
     driver: bridge
  ```
  ---
- <3>Inside the Container <b>radius</b></h3>
+ <h3>Inside the Container <b>radius</b></h3>
  Edit the file vim /etc/freeradius/3.0/mods-config/sql/main/mysql/setup.sql like an example below:
  ---
  ```sql
