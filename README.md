@@ -8,7 +8,7 @@
     <p> - Apache
     <p> - php
     <p> - MariaDB-client
-   <p> You need a separate container with MariaDB service. <u>(See the docker-compose below)</u>
+ <p> You need a separate container with MariaDB service.</p><u>(See the docker-compose below)</u>
    <p> DaloRadius' Credentials:
     <p> User: administrator <p>Password: radius
  <p><strong>################################################</strong><p>
