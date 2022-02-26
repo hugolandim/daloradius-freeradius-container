@@ -35,16 +35,14 @@ used for version control
 standard value: America/Sao_Paulo - <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"> See the list of timezones</a>
 <hr size="100" width="100%" color="red"> 
  
-DALO_VERSION V1.3
+<h2>DALO_VERSION V1.3</h2>
 
 
 <hr size="100" width="100%" color="red"> 
  Docker-compose example
 
-If you are using armhf you have to change the MariaDB image. I have provided an example below as a comment.
+If you are using armhf you have to change the MariaDB image.
  
- 
-
 ```yaml
 version: "3"
 services:
@@ -88,10 +86,11 @@ networks:
     driver: bridge
  ```
  ---
- <h2>Inside the Container <b>radius</b></h2>
+ <h2>Inside the container <strong>radius</strong></h2>
  
  Edit the file vim /etc/freeradius/3.0/mods-config/sql/main/mysql/setup.sql like an example below:
  ---
+ 
  ```sql
  
  # -*- text -*-
