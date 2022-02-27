@@ -125,13 +125,13 @@ GRANT ALL on radius.radpostauth TO 'radius'@'radiusmysql';
 -- INSERT --  
  ```
  ---
- Commands for MariaDB
-sudo mysql_secure_installation
+ <p>Commands for MariaDB
+<p>sudo mysql_secure_installation
 
-SET PASSWORD FOR 'radius' = PASSWORD('rddbpass');
-CREATE USER 'radius';
-GRANT SELECT ON radius.* TO 'radius';
-GRANT ALL PRIVILEGES ON *.* TO 'radius'@localhost IDENTIFIED BY 'rddbpass';
-GRANT ALL on radius.radacct TO 'radius';
-GRANT ALL on radius.radpostauth TO 'radius';
-flush privileges;
+<p>SET PASSWORD FOR 'radius' = PASSWORD('rddbpass');
+<p>CREATE USER 'radius';
+<p>GRANT SELECT ON radius.* TO 'radius';
+<p>GRANT ALL PRIVILEGES ON *.* TO 'radius'@localhost IDENTIFIED BY 'rddbpass';
+<p>GRANT ALL on radius.radacct TO 'radius';
+<p>GRANT ALL on radius.radpostauth TO 'radius';
+<p>flush privileges;
