@@ -131,7 +131,16 @@ GRANT ALL on radius.radpostauth TO 'radius'@'radiusmysql';
 <p>SET PASSWORD FOR 'radius' = PASSWORD('rddbpass');
 <p>CREATE USER 'radius';
 <p>GRANT SELECT ON radius.* TO 'radius';
-<p>GRANT ALL PRIVILEGES ON *.* TO 'radius'@localhost IDENTIFIED BY 'rddbpass';
+<p>GRANT ALL PRIVILEGES ON *.* TO 'radius'@172.27.0.3 IDENTIFIED BY 'rddbpass';
 <p>GRANT ALL on radius.radacct TO 'radius';
 <p>GRANT ALL on radius.radpostauth TO 'radius';
 <p>flush privileges;
+<p> teste do acesso remoto: SELECT User, Host FROM mysql.user WHERE Host <> 'localhost';
++--------+------------+
+| User   | Host       |
++--------+------------+
+| radius | %          |
+| root   | %          |
+| radius | 172.27.0.3 |
++--------+------------+
+3 rows in set (0.003 sec)
