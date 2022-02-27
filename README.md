@@ -125,7 +125,7 @@ GRANT ALL on radius.radpostauth TO 'radius'@'radiusmysql';
 -- INSERT --  
  ```
  ---
- <p>Commands for MariaDB
+ <p>Commands to configure MariaDB Server
 <p>sudo mysql_secure_installation
 
 <p>SET PASSWORD FOR 'radius' = PASSWORD('rddbpass');
