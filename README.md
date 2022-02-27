@@ -60,7 +60,7 @@ services:
       - MYSQL_HOST=radiusmysql
       - MYSQL_PORT=3306
       - MYSQL_DATABASE=radius
-      - MYSQL_USER=rd
+      - MYSQL_USER=radius
       - MYSQL_PASSWORD=rddbpass
     networks:
       - radius
@@ -72,7 +72,7 @@ services:
     restart: always
     environment:
       - MYSQL_DATABASE=radius
-      - MYSQL_USER=rd
+      - MYSQL_USER=radius
       - MYSQL_PASSWORD=rdbdpass
       - MYSQL_ROOT_PASSWORD=dalorootpass
     volumes:
@@ -106,8 +106,8 @@ networks:
 #
 #  Create default administrator for RADIUS
 #
-CREATE USER 'rd'@'radiusmysql';
-SET PASSWORD FOR 'rd'@'radiusmysql' = PASSWORD('rddbpass');
+CREATE USER 'radius'@'radiusmysql';
+SET PASSWORD FOR 'radius'@'radiusmysql' = PASSWORD('rddbpass');
 
 # The server can read any table in SQL
 GRANT SELECT ON radius.* TO 'rd'@'radiusmysql';
@@ -115,8 +115,8 @@ GRANT SELECT ON radius.* TO 'rd'@'radiusmysql';
 # The server can write to the accounting and post-auth logging table.
 #
 #  i.e.
-GRANT ALL on radius.radacct TO 'rd'@'radiusmysql';
-GRANT ALL on radius.radpostauth TO 'rd'@'radiusmysql';
+GRANT ALL on radius.radacct TO 'radius'@'radiusmysql';
+GRANT ALL on radius.radpostauth TO 'radius'@'radiusmysql';
 ~                                                                                                                                                                                  
 ~                                                                                                                                                                                  
 ~                                                                                                                                                                                  
@@ -124,3 +124,14 @@ GRANT ALL on radius.radpostauth TO 'rd'@'radiusmysql';
 ~                                                                                                                                                                                  
 -- INSERT --  
  ```
+ ---
+ Commands for MariaDB
+sudo mysql_secure_installation
+
+SET PASSWORD FOR 'radius' = PASSWORD('rddbpass');
+CREATE USER 'radius';
+GRANT SELECT ON radius.* TO 'radius';
+GRANT ALL PRIVILEGES ON *.* TO 'radius'@localhost IDENTIFIED BY 'rddbpass';
+GRANT ALL on radius.radacct TO 'radius';
+GRANT ALL on radius.radpostauth TO 'radius';
+flush privileges;
